@@ -34,4 +34,9 @@
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 
+  <!-- Include icon for the NuGet package -->
+  <ItemGroup>
+    <None Include="../build/Limbo.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
 </Project>
