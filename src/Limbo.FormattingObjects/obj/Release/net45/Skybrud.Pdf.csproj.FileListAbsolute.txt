@@ -1,0 +1,11 @@
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Skybrud.Pdf\bin\Release\net45\Skybrud.Pdf.dll
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Skybrud.Pdf\bin\Release\net45\Skybrud.Pdf.pdb
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Skybrud.Pdf\bin\Release\net45\Newtonsoft.Json.dll
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Skybrud.Pdf\bin\Release\net45\Skybrud.Essentials.dll
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Skybrud.Pdf\obj\Release\net45\Skybrud.Pdf.AssemblyInfoInputs.cache
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Skybrud.Pdf\obj\Release\net45\Skybrud.Pdf.AssemblyInfo.cs
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Skybrud.Pdf\obj\Release\net45\Skybrud.Pdf.csproj.CoreCompileInputs.cache
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Skybrud.Pdf\obj\Release\net45\Skybrud.Pdf.csproj.CopyComplete
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Skybrud.Pdf\obj\Release\net45\Skybrud.Pdf.dll
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Skybrud.Pdf\obj\Release\net45\Skybrud.Pdf.pdb
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Skybrud.Pdf\obj\Release\net45\Skybrud.Pdf.csprojAssemblyReference.cache

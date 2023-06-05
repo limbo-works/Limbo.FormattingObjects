@@ -1,0 +1,9 @@
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\Skybrud.Pdf\bin\Release\Skybrud.Pdf.dll
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\Skybrud.Pdf\bin\Release\Skybrud.Pdf.pdb
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\Skybrud.Pdf\bin\Release\Newtonsoft.Json.dll
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\Skybrud.Pdf\bin\Release\Skybrud.Essentials.dll
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\Skybrud.Pdf\bin\Release\Newtonsoft.Json.xml
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\Skybrud.Pdf\bin\Release\Skybrud.Essentials.xml
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\Skybrud.Pdf\obj\Release\Skybrud.Pdf.dll
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\Skybrud.Pdf\obj\Release\Skybrud.Pdf.pdb
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\Skybrud.Pdf\obj\Release\Skybrud.Pdf.csprojResolveAssemblyReference.cache

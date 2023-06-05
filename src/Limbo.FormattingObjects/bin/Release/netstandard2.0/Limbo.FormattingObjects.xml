@@ -1,0 +1,1092 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Limbo.FormattingObjects</name>
+    </assembly>
+    <members>
+        <member name="T:Limbo.FormattingObjects.Constants.FoConstants">
+            <summary>
+            Class with various constants used throughout the <strong>XSL-FO</strong> implementation.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Constants.FoConstants.Namespace">
+            <summary>
+            Gets the primary namespace of <strong>XSL-FO</strong>.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Constants.FoConstants.NamespaceIbex">
+            <summary>
+            Gets a reference to the <strong>Ibex</strong> namespace.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.FoBasicLink">
+            <summary>
+            The start resource of a simple link.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.FoBasicLink.InternalDestination">
+            <summary>
+            The destination flow object within the formatting object tree. This property allows the destination flow
+            object node to be explicitly specified.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.FoBasicLink.ExternalDestination">
+            <summary>
+            The destination resource (or, when a fragment identifier is given, sub-resource).
+            </summary>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoBlock.Add(System.String)">
+            <summary>
+            Appends a new <see cref="T:Limbo.FormattingObjects.Inline.FoInline"/> child element containting the specified <paramref name="text"/>.
+            </summary>
+            <param name="text">The text of the inline element.</param>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoCollection`1.Add(`0)">
+            <summary>
+            Adds <paramref name="item"/> to the end of the <see cref="T:Limbo.FormattingObjects.Pages.FoFlowCollection"/>.
+            </summary>
+            <param name="item">The item to be added to the end of the <see cref="T:Limbo.FormattingObjects.FoCollection`1"/>.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="item"/> is null.</exception>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoCollection`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Adds the flows of the specified <paramref name="collection"/> to the end of the <see cref="T:Limbo.FormattingObjects.FoCollection`1"/>.
+            </summary>
+            <param name="collection">The collection whose elements should be added to the end of the <see cref="T:Limbo.FormattingObjects.FoCollection`1"/>. The collection itself cannot be null.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="collection"/> is null.</exception>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoCollection`1.Clear">
+            <summary>
+            Removes all elements from the <see cref="T:Limbo.FormattingObjects.FoCollection`1"/>.
+            </summary>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoCollection`1.Remove(`0)">
+            <summary>
+            Removes the first occurrence of a <paramref name="item"/> from the <see cref="T:Limbo.FormattingObjects.FoCollection`1"/>.
+            </summary>
+            <param name="item">The item to remove from the <see cref="T:Limbo.FormattingObjects.FoCollection`1"/>.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="item"/> is null.</exception>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoCollection`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the <see cref="T:Limbo.FormattingObjects.FoCollection`1"/>.
+            </summary>
+            <returns>An enumerator for the <see cref="T:Limbo.FormattingObjects.FoCollection`1"/>.</returns>
+        </member>
+        <member name="P:Limbo.FormattingObjects.FoContainer.DisplayAlign">
+            <summary>
+            Gets or sets the alignment, in the block-progression-direction, of the areas that are the children of a
+            reference-area.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.FoContainer.KeepTogether">
+            <summary>
+            Gets or sets the keep-together conditions on formatting objects. Default is <see cref="F:Limbo.FormattingObjects.Styles.FoKeepTogether.Inherit"/>.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.FoContainer.TextAlign">
+            <summary>
+            Gets or sets how inline content of a block should be aligned.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.FoContainer.TextDecoration">
+            <summary>
+            Gets or sets the decorations that should be added to the text of an element.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.FoDocument.LayoutMasterSet">
+            <summary>
+            A wrapper around all masters used in the document.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.FoDocument.PageSequences">
+            <summary>
+            Specifies how to create a (sub-)sequence of pages within a document; for example, a chapter of a report.
+            </summary>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoDocument.Save(System.IO.Stream)">
+            <summary>
+            Saves the <strong>XSL-FO</strong> document to the specified <paramref name="stream"/>.
+            </summary>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoDocument.GetStream">
+            <summary>
+            Save the <strong>XSL-FO</strong> document to a new stream, and returns that stream.
+            </summary>
+            <returns>An instance of <see cref="T:System.IO.MemoryStream"/> representing the <strong>XSL-FO</strong> document.</returns>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoDocument.GetStream(Limbo.FormattingObjects.FoRenderOptions)">
+            <summary>
+            Save the <strong>XSL-FO</strong> document to a new stream, and returns that stream.
+            </summary>
+            <param name="options">The options.</param>
+            <returns>An instance of <see cref="T:System.IO.MemoryStream"/> representing the <strong>XSL-FO</strong> document.</returns>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoElement.ToXElement">
+            <summary>
+            Returns an <see cref="T:System.Xml.Linq.XElement"/> representation of the element using default formatting options.
+            </summary>
+            <returns>The <see cref="T:System.Xml.Linq.XElement"/> representing the element.</returns>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoElement.ToXElement(Limbo.FormattingObjects.FoRenderOptions)">
+            <summary>
+            Returns an <see cref="T:System.Xml.Linq.XElement"/> representation of the element using the specified formatting <paramref name="options"/>.
+            </summary>
+            <param name="options">The options for rendering the element.</param>
+            <returns>The <see cref="T:System.Xml.Linq.XElement"/> representing the element.</returns>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoElement.ToString">
+            <summary>
+            Returns a string representation of the element using default formatting options.
+            </summary>
+            <returns>The string representing the element.</returns>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoElement.ToString(Limbo.FormattingObjects.FoRenderOptions)">
+            <summary>
+            Returns a string representation of the element using the specified formatting <paramref name="options"/>.
+            </summary>
+            <param name="options">The options for rendering the element.</param>
+            <returns>The string representing the element.</returns>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoElement.ToKebabCase(System.Enum)">
+            <summary>
+            Converts the specified enum <paramref name="value"/> to a kebab cased string (lowercase words separated by hyphens).
+            </summary>
+            <param name="value">The enum value.</param>
+            <returns>The string representing the enum value.</returns>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoElement.RenderAttributes(System.Xml.Linq.XElement,Limbo.FormattingObjects.FoRenderOptions)">
+            <summary>
+            Renders the attributes of the element.
+            </summary>
+            <param name="element">The element to be rendered.</param>
+            <param name="options">The options for rendering the element.</param>
+        </member>
+        <member name="M:Limbo.FormattingObjects.FoElement.RenderChildren(System.Xml.Linq.XElement,Limbo.FormattingObjects.FoRenderOptions)">
+            <summary>
+            Renders the children of the element.
+            </summary>
+            <param name="element">The element to be rendered.</param>
+            <param name="options">The options for rendering the element.</param>
+        </member>
+        <member name="T:Limbo.FormattingObjects.FoLeader">
+            <summary>
+            Generates leaders consisting either of a rule or of a row of a repeating character or cyclically repeating
+            pattern of characters that may be used for connecting two text formatting objects.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_leader</cref>
+            </see>
+        </member>
+        <member name="F:Limbo.FormattingObjects.FoLeader.LeaderPattern">
+            <summary>
+            How to fill in the leader.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#leader-pattern</cref>
+            </see>
+        </member>
+        <member name="F:Limbo.FormattingObjects.FoLeader.LeaderLength">
+            <summary>
+            The minimum, optimum, and maximum length of an fo:leader.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#leader-length</cref>
+            </see>
+        </member>
+        <member name="F:Limbo.FormattingObjects.FoLeader.Thickness">
+            <summary>
+            The overall thickness of the rule.
+            </summary>
+            <see cref="!:https://www.w3.org/TR/xsl11/#rule-thickness"/>
+        </member>
+        <member name="F:Limbo.FormattingObjects.FoLeader.Color">
+            <summary>
+            The foreground color of an element's text content.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#color</cref>
+            </see>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Graphics.FoExternalGraphic">
+            <summary>
+            A graphic where the graphics data resides outside of the XML result tree in the fo namespace.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_external-graphic</cref>
+            </see>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Graphics.FoExternalGraphic.Src">
+            <summary>
+            The URI-specification to locate an external resource such as image/graphic data to be included as the
+            content of this object, or color-profile data.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#src</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Graphics.FoExternalGraphic.Width">
+            <summary>
+            The content width of boxes generated by block-level and replaced elements. This property does not apply to
+            non-replaced inline-level elements. The width of a non-replaced inline element's boxes is that of the
+            rendered content within them (before any relative offset of children). Recall that inline boxes flow into
+            line boxes. The width of line boxes is given by their containing block, but may be shorted by the presence
+            of floats.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#width</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Graphics.FoExternalGraphic.Height">
+            <summary>
+            The content height of boxes generated by block-level and replaced elements. This property does not apply to
+            non-replaced inline-level elements. The height of a non-replaced inline element's boxes is given by the
+            element's (possibly inherited) 'line-height' value.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#height</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Graphics.FoExternalGraphic.ContentWidth">
+            <summary>
+            The content-width of some object (e.g., an external graphic). If the value is a percentage, the value of
+            this property is the percentage applied to the intrinsic width.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#content-width</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Graphics.FoExternalGraphic.ContentHeight">
+            <summary>
+            The content-height of some object (e.g., an external graphic). If the value is a percentage, the value of
+            this property is the percentage applied to the intrinsic height.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#content-height</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Graphics.FoExternalGraphic.Scaling">
+            <summary>
+            Whether scaling needs to preserve the intrinsic aspect ratio.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#scaling</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Graphics.FoExternalGraphic.ScalingMethod">
+            <summary>
+            Indicates a preference in the scaling/sizing tradeoff to be used when formatting bitmapped graphics.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#scaling-method</cref>
+            </see>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Graphics.FoExternalGraphic.#ctor">
+            <summary>
+            Initializes a new instance with default options.
+            </summary>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Graphics.FoExternalGraphic.#ctor(System.String)">
+            <summary>
+            Initializes a new instance with the specified <paramref name="src"/>.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Graphics.FoScaling">
+            <summary>
+            Whether scaling needs to preserve the intrinsic aspect ratio.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#scaling</cref>
+            </see>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Graphics.FoScaling.Uniform">
+            <summary>
+            Scaling should preserve the aspect ratio.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Graphics.FoScaling.NonUniform">
+            <summary>
+            Scaling need not preserve the aspect ratio.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Graphics.FoScalingMethod">
+            <summary>
+            Indicates a preference in the scaling/sizing tradeoff to be used when formatting bitmapped graphics.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#scaling-method</cref>
+            </see>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Graphics.FoScalingMethod.Auto">
+            <summary>
+            The User Agent is free to choose either resampling, integer scaling, or any other scaling method.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Graphics.FoScalingMethod.IntegerPixels">
+            <summary>
+            The User Agent should scale the image such that each pixel in the original image is scaled to the nearest
+            integer number of device-pixels that yields an image less-then-or-equal-to the image size derived from the
+            content-height, content-width, and scaling properties.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Graphics.FoScalingMethod.ResampleAnyMethod">
+            <summary>
+            The User Agent should resample the supplied image to provide an image that fills the size derived from the
+            content-height, content-width, and scaling properties. The user agent may use any sampling method.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Limbo.FormattingObjects.Ibex.IbexProperties.Title" -->
+        <member name="P:Limbo.FormattingObjects.Ibex.IbexProperties.Author">
+            <summary>
+            Specifies a string which becomes the subject property of the document.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Ibex.IbexProperties.Subject">
+            <summary>
+            Specifies a string which becomes the author property of the document.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Ibex.IbexProperties.Keywords">
+            <summary>
+            Specifies a string which becomes the keywords property of the document.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Ibex.IbexProperties.Creator">
+            <summary>
+            Specifies a string which becomes the creator property of the document. This should be the name of the
+            application which created the XSL-FO document from which the PDF file was created.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Inline.FoInline">
+            <summary>
+            Formats a portion of text with a background or enclosing it in a border.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_inline</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Inline.FoText.Value">
+            <summary>
+            Gets or sets the text.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Lists.FoListBlock">
+            <summary>
+            A list.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_list-block</cref>
+            </see>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Lists.FoListItem">
+            <summary>
+            The label and the body of an item in a list.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_list-item</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Lists.FoListItem.Label">
+            <summary>
+            The label of a list-item; typically used to either enumerate, identify, or adorn the list-item's body.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Lists.FoListItem.Body">
+            <summary>
+            The body of a list-item.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Lists.FoListItemBody">
+            <summary>
+            The body of a list-item.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_list-item-body</cref>
+            </see>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Lists.FoListItemLabel">
+            <summary>
+            The label of a list-item; typically used to either enumerate, identify, or adorn the list-item's body.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.MasterPages.FoLayoutMasterSet">
+            <summary>
+            A wrapper around all masters used in the document.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_layout-master-set</cref>
+            </see>
+        </member>
+        <member name="T:Limbo.FormattingObjects.MasterPages.FoMasterPageCollection">
+            <summary>
+            Represents a collection of <see cref="T:Limbo.FormattingObjects.MasterPages.FoMasterPage"/> elements.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.MasterPages.FoSimpleMasterPage">
+            <summary>
+            Used in the generation of pages and specifies the geometry of the page. The page is subdivided into regions.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_simple-page-master</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.MasterPages.FoSimpleMasterPage.MasterName">
+            <summary>
+            Names identify masters, may not be empty and must be unique.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#master-name</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.MasterPages.FoSimpleMasterPage.PageWidth">
+            <summary>
+            The width of the page.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#page-width</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.MasterPages.FoSimpleMasterPage.PageHeight">
+            <summary>
+            The height of the page.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#page-height</cref>
+            </see>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Pages.FoFlow">
+            <summary>
+            A sequence of flow objects that provides the flowing text content that is distributed into pages.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_flow</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Pages.FoFlow.Id">
+            <summary>
+            An identifier unique within all objects in the result tree with the <c>fo:</c> namespace. It allows
+            references to this formatting object by other objects.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#id</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Pages.FoFlow.FlowName">
+            <summary>
+            The name of the flow.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#flow-name</cref>
+            </see>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoFlow.#ctor(System.String)">
+            <summary>
+            Initializes a new flow with the specified <paramref name="name"/>.
+            </summary>
+            <param name="name">The name of the flow.</param>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoFlow.#ctor(System.String,System.Collections.Generic.IEnumerable{Limbo.FormattingObjects.FoElement})">
+            <summary>
+            Initializes a new flow with the specified <paramref name="name"/>.
+            </summary>
+            <param name="name">The name of the flow.</param>
+            <param name="children">A collection of <see cref="T:Limbo.FormattingObjects.FoElement"/> to be added to the flow.</param>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoFlow.#ctor(System.String,Limbo.FormattingObjects.FoElement[])">
+            <summary>
+            Initializes a new flow with the specified <paramref name="name"/>.
+            </summary>
+            <param name="name">The name of the flow.</param>
+            <param name="children">A collection of <see cref="T:Limbo.FormattingObjects.FoElement"/> to be added to the flow.</param>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoFlow.RenderAttributes(System.Xml.Linq.XElement,Limbo.FormattingObjects.FoRenderOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoFlow.ToXElement(Limbo.FormattingObjects.FoRenderOptions)">
+            <inheritdoc />
+        </member>
+        <member name="T:Limbo.FormattingObjects.Pages.FoFlowCollection">
+            <summary>
+            Represents a collection of <see cref="T:Limbo.FormattingObjects.Pages.FoFlow"/> elements.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Pages.FoPageCitationStrategy">
+            <summary>
+            Determines what set of page areas are considered by a page number citation formatting object.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#page-citation-strategy</cref>
+            </see>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Pages.FoPageNumber">
+            <summary>
+            The current page-number.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_page-number</cref>
+            </see>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Pages.FoPageNumberCitation">
+            <summary>
+            References the page-number for the page containing the first normal area returned by the cited formatting object.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_page-number-citation</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Pages.FoPageNumberCitation.ReferenceId">
+            <summary>
+            Reference to the object having the specified unique identifier.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#ref-id</cref>
+            </see>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageNumberCitation.#ctor">
+            <summary>
+            Initializes a new instance with default options.
+            </summary>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageNumberCitation.#ctor(System.String)">
+            <summary>
+            Initializes a new instance with the specified <paramref name="referenceId"/>.
+            </summary>
+            <param name="referenceId">Reference to the object having the specified unique identifier.</param>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageNumberCitation.RenderAttributes(System.Xml.Linq.XElement,Limbo.FormattingObjects.FoRenderOptions)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageNumberCitation.ToXElement(Limbo.FormattingObjects.FoRenderOptions)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Pages.FoPageNumberCitationLast">
+            <summary>
+            References the page-number for the last page containing the an area that is (a) returned by the cited
+            formatting object and (b) has an area-class that is consistent with the specified page-citation-strategy.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_page-number-citation-last</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Pages.FoPageNumberCitationLast.PageCitationStrategy">
+            <summary>
+            Determines what set of page areas are considered by a page number citation formatting object.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#page-citation-strategy</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Pages.FoPageNumberCitationLast.ReferenceId">
+            <summary>
+            Reference to the object having the specified unique identifier.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#ref-id</cref>
+            </see>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageNumberCitationLast.#ctor">
+            <summary>
+            Initializes a new instance with default options.
+            </summary>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageNumberCitationLast.#ctor(System.String)">
+            <summary>
+            Initializes a new instance with the specified <paramref name="referenceId"/>.
+            </summary>
+            <param name="referenceId">Reference to the object having the specified unique identifier.</param>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageNumberCitationLast.#ctor(Limbo.FormattingObjects.Pages.FoPageCitationStrategy)">
+            <summary>
+            Initializes a new instance with the specified <paramref name="pageCitationStrategy"/>.
+            </summary>
+            <param name="pageCitationStrategy">Determines what set of page areas are considered by a page number citation formatting object.</param>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageNumberCitationLast.#ctor(Limbo.FormattingObjects.Pages.FoPageCitationStrategy,System.String)">
+            <summary>
+            Initializes a new instance with the specified <paramref name="referenceId"/> and <paramref name="pageCitationStrategy"/>.
+            </summary>
+            <param name="pageCitationStrategy">Determines what set of page areas are considered by a page number citation formatting object.</param>
+            <param name="referenceId">Reference to the object having the specified unique identifier.</param>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageNumberCitationLast.RenderAttributes(System.Xml.Linq.XElement,Limbo.FormattingObjects.FoRenderOptions)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageNumberCitationLast.ToXElement(Limbo.FormattingObjects.FoRenderOptions)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Pages.FoPageSequence">
+            <summary>
+            Specifies how to create a (sub-)sequence of pages within a document; for example, a chapter of a report. The
+            content of these pages comes from flow children of the <c>fo:page-sequence</c>. Specifies that only the
+            children of <c>fo:markers</c> that are descendants of any <c>fo:flow</c> within the containing
+            <c>fo:page-sequence</c> may be retrieved by this <c>fo:retrieve-marker</c>.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_page-sequence</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Pages.FoPageSequence.MasterReference">
+            <summary>
+            The names need not be unique, but may not be empty and must refer to a master-name that exists within the
+            document.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#master-reference</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Pages.FoPageSequence.Id">
+            <summary>
+            An identifier unique within all objects in the result tree with the <c>fo:</c> namespace. It allows
+            references to this formatting object by other objects.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#id</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Pages.FoPageSequence.StaticContent">
+            <summary>
+            A sequence or a tree of formatting objects that is to be presented in a single region or repeated in
+            like-named regions on one or more pages in the page-sequence. Its common use is for repeating or running
+            headers and footers.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Pages.FoPageSequence.Flows">
+            <summary>
+            A sequence of flow objects that provides the flowing text content that is distributed into pages.
+            </summary>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageSequence.#ctor">
+            <summary>
+            Initializes a new page sequence with default options.
+            </summary>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageSequence.#ctor(System.String)">
+            <summary>
+            Initializes a new page sequence with the specified <paramref name="masterReference"/>.
+            </summary>
+            <param name="masterReference">The name of the master page.</param>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageSequence.#ctor(System.String,Limbo.FormattingObjects.Pages.FoFlow[])">
+            <summary>
+            Initializes a new page sequence with the specified <paramref name="masterReference"/>.
+            </summary>
+            <param name="masterReference">The name of the master page.</param>
+            <param name="flows">A collection of flows to be added to the page sequence.</param>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageSequence.#ctor(System.String,System.String,Limbo.FormattingObjects.Pages.FoFlow[])">
+            <summary>
+            Initializes a new page sequence with the specified <paramref name="masterReference"/>.
+            </summary>
+            <param name="masterReference">The name of the master page.</param>
+            <param name="id">The ID of the page sequence.</param>
+            <param name="flows">A collection of flows to be added to the page sequence.</param>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageSequence.RenderAttributes(System.Xml.Linq.XElement,Limbo.FormattingObjects.FoRenderOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageSequence.RenderChildren(System.Xml.Linq.XElement,Limbo.FormattingObjects.FoRenderOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:Limbo.FormattingObjects.Pages.FoPageSequence.ToXElement(Limbo.FormattingObjects.FoRenderOptions)">
+            <inheritdoc />
+        </member>
+        <member name="T:Limbo.FormattingObjects.Pages.FoPageSequenceCollection">
+            <summary>
+            Represents a collection of <see cref="T:Limbo.FormattingObjects.Pages.FoPageSequence"/> elements.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Pages.FoStaticContent.Id">
+            <summary>
+            An identifier unique within all objects in the result tree with the <c>fo:</c> namespace. It allows
+            references to this formatting object by other objects.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Pages.FoStaticContent.IndexClass">
+            <summary>
+            Associates an index class with a formatting object that also has an index key specified.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Pages.FoStaticContent.IndexKey">
+            <summary>
+            Associates an index key with the formatting object on which it is specified.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Pages.FoStaticContent.FlowName">
+            <summary>
+            The name of the flow.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Pages.FoStaticContentCollection">
+            <summary>
+            Represents a collection of <see cref="T:Limbo.FormattingObjects.Pages.FoStaticContent"/> elements.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Regions.FoRegion.RegionName">
+            <summary>
+            Identifies a region within a simple-page-master.
+            </summary>
+            <see cref="!:http://www.datypic.com/sc/fo11/a-region-name-1.html"/>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Regions.FoRegionAfter">
+            <summary>
+            A viewport that is located on the "after" side of fo:region-body region.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_region-after</cref>
+            </see>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Regions.FoRegionAfter.ToXElement(Limbo.FormattingObjects.FoRenderOptions)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Regions.FoRegionBefore">
+            <summary>
+            A viewport that is located on the "before" side of fo:region-body region.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_region-before</cref>
+            </see>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Regions.FoRegionBefore.ToXElement(Limbo.FormattingObjects.FoRenderOptions)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Regions.FoRegionBody">
+            <summary>
+            A viewport/reference pair that is located in the "center" of the fo:simple-page-master.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#region-name</cref>
+            </see>
+        </member>
+        <member name="M:Limbo.FormattingObjects.Regions.FoRegionBody.ToXElement(Limbo.FormattingObjects.FoRenderOptions)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Regions.FoRegionCollection">
+            <summary>
+            Represents a collection of <see cref="T:Limbo.FormattingObjects.Regions.FoRegion"/> elements.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Styles.FoDisplayAlign">
+            <summary>
+            Enum class indicating the alignment, in the block-progression-direction, of the areas that are the children of
+            a reference-area.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#display-align</cref>
+            </see>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoDisplayAlign.Auto">
+            <summary>
+            If the "relative-align" property applies to this formatting object the "relative-align" property is used.
+            If not, this value is treated as if "before" had been specified.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoDisplayAlign.Before">
+            <summary>
+            The before-edge of the allocation-rectangle of the first child area is placed coincident with the
+            before-edge of the content-rectangle of the reference-area.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoDisplayAlign.Center">
+            <summary>
+            The child areas are placed such that the distance between the before-edge of the allocation-rectangle of
+            the first child area and the before-edge of the content-rectangle of the reference-area is the same as the
+            distance between the after-edge of the allocation-rectangle of the last child area and the after-edge of
+            the content-rectangle of the reference-area.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoDisplayAlign.After">
+            <summary>
+            The after-edge of the allocation-rectangle of the last child area is placed coincident with the after-edge
+            of the content-rectangle of the reference-area.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Styles.FoFontStyle">
+            <summary>
+            Enum class representing the font style of an element. Only supports <see cref="F:Limbo.FormattingObjects.Styles.FoFontStyle.Normal"/> and
+            <see cref="F:Limbo.FormattingObjects.Styles.FoFontStyle.Italic"/> for now.
+            </summary>
+            <see cref="!:http://www.datypic.com/sc/fo11/a-font-style-1.html"/>
+            <see cref="!:http://www.htmldog.com/references/css/properties/font-style/"/>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Styles.FoFontWeight">
+            <summary>
+            Enum class representing the font weight of an element. Only supports <see cref="F:Limbo.FormattingObjects.Styles.FoFontWeight.Normal"/> and
+            <see cref="F:Limbo.FormattingObjects.Styles.FoFontWeight.Bold"/> for now.
+            </summary>
+            <see cref="!:http://www.htmldog.com/references/css/properties/font-weight/"/>
+            <see cref="!:http://www.datypic.com/sc/fo11/a-font-weight-1.html"/>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#font-weight</cref>
+            </see>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Styles.FoKeepTogether">
+            <summary>
+            Enum class indicating the keep-together conditions on formatting objects.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#keep-together</cref>
+            </see>
+            <see cref="!:http://www.datypic.com/sc/fo11/a-keep-together-1.html"/>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoKeepTogether.Always">
+            <summary>
+            Imposes a keep-together condition with strength "always" in the appropriate context.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Styles.FoLeaderPattern">
+            <summary>
+            How to fill in the leader.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#leader-pattern</cref>
+            </see>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoLeaderPattern.Space">
+            <summary>
+            Blank space.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoLeaderPattern.Rule">
+            <summary>
+            A rule. If this choice is selected, the "rule-thickness" and "rule-style" properties are used to set the leader's style.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoLeaderPattern.Dots">
+            <summary>
+            A repeating sequence of dots. The choice of dot character is dependent on the user agent.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoLeaderPattern.UseContent">
+            <summary>
+            A repeating pattern as specified by the children of the <c>fo:leader</c>.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Styles.FoPageBreakBefore">
+            <summary>
+            A potential page break location is typically under the influence of the parent element's
+            <c>page-break-inside</c> property, the <c>page-break-after</c> property of the preceding element, and the
+            <c>page-break-before</c> property of the following element. When these properties have values other than
+            <see cref="F:Limbo.FormattingObjects.Styles.FoPageBreakBefore.Auto"/>, the values <see cref="F:Limbo.FormattingObjects.Styles.FoPageBreakBefore.Always"/>, <see cref="F:Limbo.FormattingObjects.Styles.FoPageBreakBefore.Left"/>, and <see cref="F:Limbo.FormattingObjects.Styles.FoPageBreakBefore.Right"/> take
+            precedence over <see cref="F:Limbo.FormattingObjects.Styles.FoPageBreakBefore.Avoid"/>. See the section on allowed page breaks for the exact rules on how these
+            properties may force or suppress a page break.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#page-break-before</cref>
+            </see>
+            <see>
+                <cref>http://www.datypic.com/sc/fo11/a-page-break-before-1.html</cref>
+            </see>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoPageBreakBefore.Inherit">
+            <summary>
+            Inherits the value from a parent or ancestor.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoPageBreakBefore.Auto">
+            <summary>
+            Neither force nor forbid a page break before (after, inside) the generated box.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoPageBreakBefore.Always">
+            <summary>
+            Always force a page break before (after) the generated box.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoPageBreakBefore.Avoid">
+            <summary>
+            Avoid a page break before (after, inside) the generated box.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoPageBreakBefore.Left">
+            <summary>
+            Force one or two page breaks before (after) the generated box so that the next page is formatted as a left page.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoPageBreakBefore.Right">
+            <summary>
+            Force one or two page breaks before (after) the generated box so that the next page is formatted as a right page.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Styles.FoTextAlign">
+            <summary>
+            Enum class indicating how inline content of a block should be aligned.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#text-align</cref>
+            </see>
+            <see cref="!:http://www.datypic.com/sc/fo11/a-text-align-1.html"/>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoTextAlign.Start">
+            <summary>
+            Specifies that the content is to be aligned on the start-edge in the inline-progression-direction.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoTextAlign.Center">
+            <summary>
+            Specifies that the content is to be centered in the inline-progression-direction.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoTextAlign.End">
+            <summary>
+            Specifies that the content is to be aligned on the end-edge in the inline-progression-direction.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoTextAlign.Justify">
+            <summary>
+            Specifies that the contents is to be expanded to fill the available width in the inline-progression-direction.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoTextAlign.Inside">
+            <summary>
+            If the page binding edge is on the start-edge, the alignment will be start. If the binding is the end-edge, the alignment will be end. If neither, use start alignment.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoTextAlign.Outside">
+            <summary>
+            If the page binding edge is on the start-edge, the alignment will be end. If the binding is the end-edge, the alignment will be start. If neither, use end alignment.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoTextAlign.Left">
+            <summary>
+            Interpreted as <code>text-align='start'</code>.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoTextAlign.Right">
+            <summary>
+            Interpreted as <code>text-align='end'</code>.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Styles.FoTextDecoration">
+            <summary>
+            Enum class representing the text decoration of an element.
+            </summary>
+            <see cref="!:http://www.htmldog.com/references/css/properties/text-decoration/"/>
+            <see cref="!:http://www.datypic.com/sc/fo11/a-text-decoration-1.html"/>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#text-decoration</cref>
+            </see>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoTextDecoration.None">
+            <summary>
+            Produces no text decoration.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoTextDecoration.Underline">
+            <summary>
+            Each line of text is underlined.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoTextDecoration.Overline">
+            <summary>
+            Each line of text has a line above it.
+            </summary>
+        </member>
+        <member name="F:Limbo.FormattingObjects.Styles.FoTextDecoration.LineThrough">
+            <summary>
+            Each line of text has a line through the middle
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Tables.FoTableCell">
+            <summary>
+            A table cell.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_table-cell</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Tables.FoTableCell.Colspan">
+            <summary>
+            Alias <see cref="P:Limbo.FormattingObjects.Tables.FoTableCell.NumberColumnsSpanned"/>.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Tables.FoTableCell.NumberColumnsSpanned">
+            <summary>
+            The number of columns which this cell spans in the column-progression-direction starting with the current column.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#number-columns-spanned</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Tables.FoTableCell.Rowspan">
+            <summary>
+            Alias of <see cref="P:Limbo.FormattingObjects.Tables.FoTableCell.NumberRowsSpanned"/>.
+            </summary>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Tables.FoTableCell.NumberRowsSpanned">
+            <summary>
+            The number of rows which this cell spans in the row-progression-direction starting with the current row.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#number-rows-spanned</cref>
+            </see>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Tables.FoTableCellCollection">
+            <summary>
+            Represents a collection of <see cref="T:Limbo.FormattingObjects.Tables.FoTableCell"/> elements.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Tables.FoTableColumn">
+            <summary>
+            Characteristics applicable to table cells that have the same column and span.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_table-column</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Tables.FoTableColumn.ColumnNumber">
+            <summary>
+            Specifies the column-number of the table cells that may use properties from this fo:table-column formatting
+            object by using the from-table-column() function. The initial value is 1 plus the column-number of the
+            previous table-column, if there is a previous table-column, and otherwise 1.
+            </summary>
+            <see>
+                <cref>http://www.datypic.com/sc/fo11/a-column-number-1.html</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Tables.FoTableColumn.ColumnWidth">
+            <summary>
+            The width of the column whose value is given by the "column-number" property. This property, if present, is
+            ignored if the "number-columns-spanned" property is greater than 1. The "column-width" property must be
+            specified for every column, unless the automatic table layout is used.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#column-number</cref>
+            </see>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Tables.FoTableColumnCollection">
+            <summary>
+            Represents a collection of <see cref="T:Limbo.FormattingObjects.Tables.FoTableColumn"/> elements.
+            </summary>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Tables.FoTableRow">
+            <summary>
+            Groups table-cells into rows.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#fo_table-row</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Tables.FoTableRow.KeepTogether">
+            <summary>
+            Imposes keep-together conditions on formatting objects.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#keep-together</cref>
+            </see>
+        </member>
+        <member name="P:Limbo.FormattingObjects.Tables.FoTableRow.KeepTogetherWithinColumn">
+            <summary>
+            Imposes keep-together conditions on formatting objects.
+            </summary>
+            <see>
+                <cref>https://www.w3.org/TR/xsl11/#keep-together</cref>
+            </see>
+        </member>
+        <member name="T:Limbo.FormattingObjects.Tables.FoTableRowCollection">
+            <summary>
+            Represents a collection of <see cref="T:Limbo.FormattingObjects.Tables.FoTableRow"/> elements.
+            </summary>
+        </member>
+    </members>
+</doc>

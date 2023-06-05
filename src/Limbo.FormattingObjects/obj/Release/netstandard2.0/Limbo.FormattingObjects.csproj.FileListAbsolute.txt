@@ -1,0 +1,11 @@
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Limbo.FormattingObjects\obj\Release\netstandard2.0\Limbo.FormattingObjects.csproj.AssemblyReference.cache
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Limbo.FormattingObjects\obj\Release\netstandard2.0\Limbo.FormattingObjects.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Limbo.FormattingObjects\obj\Release\netstandard2.0\Limbo.FormattingObjects.AssemblyInfoInputs.cache
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Limbo.FormattingObjects\obj\Release\netstandard2.0\Limbo.FormattingObjects.AssemblyInfo.cs
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Limbo.FormattingObjects\obj\Release\netstandard2.0\Limbo.FormattingObjects.csproj.CoreCompileInputs.cache
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Limbo.FormattingObjects\bin\Release\netstandard2.0\Limbo.FormattingObjects.xml
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Limbo.FormattingObjects\bin\Release\netstandard2.0\Limbo.FormattingObjects.deps.json
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Limbo.FormattingObjects\bin\Release\netstandard2.0\Limbo.FormattingObjects.dll
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Limbo.FormattingObjects\bin\Release\netstandard2.0\Limbo.FormattingObjects.pdb
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Limbo.FormattingObjects\obj\Release\netstandard2.0\Limbo.FormattingObjects.dll
+D:\Repositories\Skybrud.dk\Skybrud.Pdf\src\Limbo.FormattingObjects\obj\Release\netstandard2.0\Limbo.FormattingObjects.pdb

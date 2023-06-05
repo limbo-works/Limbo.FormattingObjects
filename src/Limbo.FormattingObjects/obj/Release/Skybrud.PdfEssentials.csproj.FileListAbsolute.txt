@@ -1,0 +1,8 @@
+d:\Repositories\Skybrud.dk\Skybrud.PdfEssentials\Skybrud.PdfEssentials\bin\Release\Skybrud.PdfEssentials.dll
+d:\Repositories\Skybrud.dk\Skybrud.PdfEssentials\Skybrud.PdfEssentials\bin\Release\Skybrud.PdfEssentials.pdb
+d:\Repositories\Skybrud.dk\Skybrud.PdfEssentials\Skybrud.PdfEssentials\bin\Release\Newtonsoft.Json.dll
+d:\Repositories\Skybrud.dk\Skybrud.PdfEssentials\Skybrud.PdfEssentials\bin\Release\Skybrud.Essentials.dll
+d:\Repositories\Skybrud.dk\Skybrud.PdfEssentials\Skybrud.PdfEssentials\bin\Release\Newtonsoft.Json.xml
+d:\Repositories\Skybrud.dk\Skybrud.PdfEssentials\Skybrud.PdfEssentials\bin\Release\Skybrud.Essentials.xml
+d:\Repositories\Skybrud.dk\Skybrud.PdfEssentials\Skybrud.PdfEssentials\obj\Release\Skybrud.PdfEssentials.dll
+d:\Repositories\Skybrud.dk\Skybrud.PdfEssentials\Skybrud.PdfEssentials\obj\Release\Skybrud.PdfEssentials.pdb
