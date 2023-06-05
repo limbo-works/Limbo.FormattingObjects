@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Xml.Linq;
 using Skybrud.Essentials.Strings.Extensions;
 
@@ -63,7 +64,27 @@ namespace Skybrud.Pdf.FormattingObjects.Tables {
 
         public FoTableCell CreateCell() {
             return AddCell(new FoTableCell());
-        }     
+        }
+
+        public FoTableRow CreateCell(Action<FoTableCell> action) {
+            FoTableCell cell = new FoTableCell();
+            AddCell(cell);
+            action(cell);
+            return this;
+        }
+
+        public FoTableRow CreateCell(out FoTableCell cell) {
+            cell = new FoTableCell();
+            AddCell(cell);
+            return this;
+        }
+
+        public FoTableRow CreateCell(out FoTableCell cell, Action<FoTableCell> action) {
+            cell = new FoTableCell();
+            AddCell(cell);
+            action(cell);
+            return this;
+        }
 
         protected override void RenderAttributes(XElement element, FoRenderOptions options) {
             base.RenderAttributes(element, options);

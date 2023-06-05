@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Xml.Linq;
 using Skybrud.Essentials.Strings;
-using Skybrud.Essentials.Strings.Extensions;
-using Skybrud.Pdf.FormattingObjects.Styles;
 
 namespace Skybrud.Pdf.FormattingObjects {
 

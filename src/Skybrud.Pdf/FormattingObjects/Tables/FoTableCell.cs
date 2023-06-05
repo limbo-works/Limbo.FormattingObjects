@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Linq;
+using Skybrud.Pdf.FormattingObjects.Styles;
 
 namespace Skybrud.Pdf.FormattingObjects.Tables {
     
@@ -9,7 +10,7 @@ namespace Skybrud.Pdf.FormattingObjects.Tables {
     /// <see>
     ///     <cref>https://www.w3.org/TR/xsl11/#fo_table-cell</cref>
     /// </see>
-    public class FoTableCell : FoContainer<FoElement> {
+    public class FoTableCell : FoContainer<FoElement>, ICanHasBackground {
 
         #region Properties
 

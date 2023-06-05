@@ -1,9 +1,12 @@
 ﻿using System.Xml.Linq;
+using Skybrud.Essentials.Strings.Extensions;
 using Skybrud.Pdf.FormattingObjects.Styles;
 
 namespace Skybrud.Pdf.FormattingObjects {
 
     public abstract class FoContainer : FoElement {
+
+        public string Id { get; set; }
 
         /// <summary>
         /// Gets or sets the alignment, in the block-progression-direction, of the areas that are the children of a
@@ -21,7 +24,7 @@ namespace Skybrud.Pdf.FormattingObjects {
 
         public string Color { get; set; }
 
-        public string PageBreakBefore { get; set; }
+        public FoPageBreakBefore PageBreakBefore { get; set; }
 
         public string Background { get; set; }
 
@@ -35,12 +38,19 @@ namespace Skybrud.Pdf.FormattingObjects {
         public FoKeepTogether KeepTogether { get; set; }
 
         public string LineHeight { get; set; }
+        
         public string Width { get; set; }
+        
         public string Height { get; set; }
+        
         public string Margin { get; set; }
+        
         public string MarginTop { get; set; }
+        
         public string MarginRight { get; set; }
+        
         public string MarginBottom { get; set; }
+        
         public string MarginLeft { get; set; }
 
         /// <summary>
@@ -54,16 +64,27 @@ namespace Skybrud.Pdf.FormattingObjects {
         public FoTextDecoration TextDecoration { get; set; }
 
         public string Padding { get; set; }
-        public string PaddingTop { get; set; }
-        public string PaddingRight { get; set; }
-        public string PaddingBottom { get; set; }
-        public string PaddingLeft { get; set; }
-        public string Border { get; set; }
-        public string BorderTop { get; set; }
-        public string BorderRight { get; set; }
-        public string BorderBottom { get; set; }
-        public string BorderLeft { get; set; }
         
+        public string PaddingTop { get; set; }
+        
+        public string PaddingRight { get; set; }
+        
+        public string PaddingBottom { get; set; }
+        
+        public string PaddingLeft { get; set; }
+        
+        public string Border { get; set; }
+        
+        public string BorderTop { get; set; }
+        
+        public string BorderRight { get; set; }
+        
+        public string BorderBottom { get; set; }
+        
+        public string BorderLeft { get; set; }
+
+        public string ZIndex { get; set; }
+
         public abstract bool HasChildren { get; }
 
         #region Member methods
@@ -72,6 +93,7 @@ namespace Skybrud.Pdf.FormattingObjects {
 
             base.RenderAttributes(element, options);
 
+            if (Id.HasValue()) element.Add("id", Id);
             if (DisplayAlign != FoDisplayAlign.Inherit) element.Add(new XAttribute("display-align", ToKebabCase(DisplayAlign)));
             if (!string.IsNullOrEmpty(FontFamily)) element.Add(new XAttribute("font-family", FontFamily));
             if (!string.IsNullOrEmpty(FontSize)) element.Add(new XAttribute("font-size", FontSize));
@@ -80,7 +102,7 @@ namespace Skybrud.Pdf.FormattingObjects {
             if (TextAlign != FoTextAlign.Inherit) element.Add(new XAttribute("text-align", ToKebabCase(TextAlign)));
             if (TextDecoration != FoTextDecoration.Inherit) element.Add(new XAttribute("text-decoration", ToKebabCase(TextDecoration)));
             if (!string.IsNullOrEmpty(Color)) element.Add(new XAttribute("color", Color));
-            if (!string.IsNullOrEmpty(PageBreakBefore)) element.Add(new XAttribute("page-break-before", PageBreakBefore));
+            if (PageBreakBefore != FoPageBreakBefore.Inherit) element.Add(new XAttribute("page-break-before", ToKebabCase(PageBreakBefore)));
             if (!string.IsNullOrEmpty(Background)) element.Add(new XAttribute("background", Background));
             if (!string.IsNullOrEmpty(BackgroundImage)) element.Add(new XAttribute("background-image", BackgroundImage));
             if (!string.IsNullOrEmpty(BackgroundRepeat)) element.Add(new XAttribute("background-repeat", BackgroundRepeat));
@@ -103,6 +125,7 @@ namespace Skybrud.Pdf.FormattingObjects {
             if (!string.IsNullOrEmpty(BorderRight)) element.Add(new XAttribute("border-right", BorderRight));
             if (!string.IsNullOrEmpty(BorderBottom)) element.Add(new XAttribute("border-bottom", BorderBottom));
             if (!string.IsNullOrEmpty(BorderLeft)) element.Add(new XAttribute("border-left", BorderLeft));
+            if (ZIndex.HasValue()) element.Add("z-index", ZIndex);
 
             #endregion
 

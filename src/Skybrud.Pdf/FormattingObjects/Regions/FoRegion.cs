@@ -1,9 +1,10 @@
 ﻿using System.Xml.Linq;
 using Skybrud.Essentials.Strings.Extensions;
+using Skybrud.Pdf.FormattingObjects.Styles;
 
 namespace Skybrud.Pdf.FormattingObjects.Regions {
 
-    public abstract class FoRegion : FoElement {
+    public abstract class FoRegion : FoElement, ICanHasBackground {
 
         #region Properties
 
@@ -12,6 +13,8 @@ namespace Skybrud.Pdf.FormattingObjects.Regions {
         /// </summary>
         /// <see cref="http://www.datypic.com/sc/fo11/a-region-name-1.html"/>
         public string RegionName { get; set; }
+
+        public string Background { get; set; }
 
         public string BackgroundRepeat { get; set; }
 
@@ -39,6 +42,7 @@ namespace Skybrud.Pdf.FormattingObjects.Regions {
         
         protected override void RenderAttributes(XElement element, FoRenderOptions options) {
             if (RegionName.HasValue()) element.Add(new XAttribute("region-name", RegionName));
+            if (Background.HasValue()) element.Add(new XAttribute("background", Background));
             if (BackgroundRepeat.HasValue()) element.Add(new XAttribute("background-repeat", BackgroundRepeat));
             if (BackgroundImage.HasValue()) element.Add(new XAttribute("background-image", "url(" + BackgroundImage + ")"));
             if (ColumnCount > 0) element.Add(new XAttribute("column-count", ColumnCount));

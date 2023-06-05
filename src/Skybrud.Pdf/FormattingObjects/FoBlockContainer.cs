@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Linq;
+using Skybrud.Pdf.FormattingObjects.Styles;
 
 namespace Skybrud.Pdf.FormattingObjects {
 
-    public class FoBlockContainer : FoContainer<FoContainer> {
+    public class FoBlockContainer : FoContainer<FoNode>, ICanHasBackground, ICanHasText {
 
         #region Constructors
 

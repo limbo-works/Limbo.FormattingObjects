@@ -4,6 +4,9 @@
 
         #region Properties
         
+        /// <summary>
+        /// Gets or sets the text.
+        /// </summary>
         public string Value { get; set; }
 
         #endregion
@@ -13,7 +16,7 @@
         public FoText() : this(string.Empty) { }
         
         public FoText(string value) {
-            Value = value;
+            Value = value ?? string.Empty;
         }
 
         #endregion

@@ -40,7 +40,6 @@ namespace Skybrud.Pdf.FormattingObjects.Inline {
 
         #endregion
 
-
     }
 
 }

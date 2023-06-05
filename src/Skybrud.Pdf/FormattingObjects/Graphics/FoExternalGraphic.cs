@@ -11,9 +11,15 @@ namespace Skybrud.Pdf.FormattingObjects.Graphics {
     /// <see>
     ///     <cref>https://www.w3.org/TR/xsl11/#fo_external-graphic</cref>
     /// </see>
-    public class FoExternalGraphic : FoElement {
+    public class FoExternalGraphic : FoElement, ICanHasBackground {
 
         #region Properties
+
+        public string Background { get; set; }
+
+        public string BackgroundImage { get; set; }
+
+        public string BackgroundRepeat { get; set; }
 
         /// <summary>
         /// The URI-specification to locate an external resource such as image/graphic data to be included as the
@@ -132,6 +138,10 @@ namespace Skybrud.Pdf.FormattingObjects.Graphics {
             if (ContentHeight.HasValue()) element.Add(new XAttribute("content-height", ContentHeight));
             if (Scaling != FoScaling.Unspecified) element.Add(new XAttribute("scaling", ToKebabCase(Scaling)));
             if (ScalingMethod != FoScalingMethod.Unspecified) element.Add(new XAttribute("scaling-method", ToKebabCase(ScalingMethod)));
+
+            if (Background.HasValue()) element.Add(new XAttribute("background", Background));
+            if (BackgroundImage.HasValue()) element.Add(new XAttribute("background-image", BackgroundImage));
+            if (BackgroundRepeat.HasValue()) element.Add(new XAttribute("background-repeat", BackgroundRepeat));
 
             if (Margin.HasValue()) element.Add(new XAttribute("margin", Margin));
             if (MarginTop.HasValue()) element.Add(new XAttribute("margin-top", MarginTop));
