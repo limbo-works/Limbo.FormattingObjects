@@ -1,5 +1,3 @@
-src/packages/
-src/Skybrud.Pdf/bin/
-src/Skybrud.Pdf/obj/
 src/.vs/
-node_modules/
+src/Limbo.FormattingObjects/bin/
+src/Limbo.FormattingObjects/obj/
