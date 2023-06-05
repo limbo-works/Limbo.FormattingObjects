@@ -1,17 +1,30 @@
-# Skybrud.Pdf [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md) [![NuGet](https://img.shields.io/nuget/v/Skybrud.Pdf.svg)](https://www.nuget.org/packages/Skybrud.Pdf)
+# Limbo.FormattingObjects [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md) [![NuGet](https://img.shields.io/nuget/v/Skybrud.Pdf.svg)](https://www.nuget.org/packages/Limbo.FormattingObjects)
 
-Skybrud.Pdf is a .NET package for generating PDFs using Formatting Objects (XSL-FO).
+Limbo.FormattingObjects is a .NET package for working with Formatting Objects (XSL-FO).
+
+
+
+
+
+<br /><br />
 
 ### Installation
 
-To install the core library of Skybrud.Pdf, simply pick one of the two methods below:
+Install the package via [NuGet](https://www.nuget.org/packages/Limbo.FormattingObjects). To install the package, you can use either .NET CLI:
 
-1. [**NuGet Package**][NuGetPackage]  
-   Install this NuGet package in your Visual Studio project. Makes updating easy.
-2. [**ZIP file**][GitHubRelease]  
-   Grab a ZIP file of the latest release; unzip and move `Skybrud.Pdf.dll` matching your target framework to the bin directory of your project.
+```
+dotnet add package Limbo.FormattingObjects
+```
+
+or the older NuGet Package Manager:
+
+```
+Install-Package Limbo.FormattingObjects
+```
 
 
+
+<br /><br />
 
 ### Found a bug? Have a question?
 
@@ -19,15 +32,17 @@ To install the core library of Skybrud.Pdf, simply pick one of the two methods b
 
 
 
+<br /><br />
+
 ### Documentation
 
-The package isn't very well document at the moment in terms of examples, but you can find a few examples on the [**reference** page](https://github.com/skybrud/Skybrud.Pdf/blob/master/REFERENCE.md).
+The package isn't very well document at the moment in terms of examples, but you can find a few examples on the [**reference** page](https://github.com/limbo-works/Limbo.FormattingObjects/blob/master/REFERENCE.md).
 
 
 
 
-[NuGetPackage]: https://www.nuget.org/packages/Skybrud.Pdf
-[GitHubRelease]: https://github.com/skybrud/Skybrud.Pdf/releases/latest
-[GitHubReleases]: https://github.com/skybrud/Skybrud.Pdf/releases
-[Changelog]: https://github.com/skybrud/Skybrud.Pdf/releases
-[Issues]: https://github.com/skybrud/Skybrud.Pdf/issues
+[NuGetPackage]: https://www.nuget.org/packages/Limbo.FormattingObjects
+[GitHubRelease]: https://github.com/limbo-works/Limbo.FormattingObjects/releases/latest
+[GitHubReleases]: https://github.com/limbo-works/Limbo.FormattingObjects/releases
+[Changelog]: https://github.com/limbo-works/Limbo.FormattingObjects/releases
+[Issues]: https://github.com/limbo-works/Limbo.FormattingObjects/issues
