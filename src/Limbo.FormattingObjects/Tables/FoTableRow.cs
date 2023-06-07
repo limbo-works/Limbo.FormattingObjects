@@ -96,6 +96,7 @@ namespace Limbo.FormattingObjects.Tables {
             XElement element = Fo("table-row");
             RenderAttributes(element, options);
             RenderChildren(element, options);
+            foreach (FoTableCell cell in Cells) element.Add(cell.ToXElement(options));
             return element;
         }
 
