@@ -1,3 +1,7 @@
+---
+order: 2
+---
+
 # Pages
 
 - [**Master Pages**](./master-pages.md)

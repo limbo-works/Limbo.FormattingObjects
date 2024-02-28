@@ -1,3 +1,7 @@
+---
+order: 10
+---
+
 # Content
 
 Once you have configured a [**page sequence](./page-sequences.md), you can start adding content to either it's `fo:flow` element or one of the `fo:static-content` elements representing a region.
